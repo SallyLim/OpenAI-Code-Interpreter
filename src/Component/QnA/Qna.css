@@ -1,0 +1,39 @@
+.flexContainer {
+    display: flex;
+    width: 100%;
+    background-color: #192536;
+}
+
+.flexDiv1{
+    flex:1;
+    border-right: 5px solid #46505E;
+    color: white;
+}
+
+.flexDiv2 {
+    flex:2;
+}
+
+.textArea {
+    margin: 10px 0px;
+    padding: 0;
+    width: 90%;
+    border-color: white;
+    background-color: inherit;
+    resize: none;
+    color: white;
+    overflow-y: scroll;
+}
+
+
+.textArea::placeholder {
+    color: #616161;
+}
+
+.submitButton {
+    width: 90%;
+    height: 35px;
+    background-color: #4285F4;
+    color: white;
+    border: 0;
+}

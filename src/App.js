@@ -1,5 +1,5 @@
 import './App.css';
-import Qna from './Views/QnA/Qna';
+import Qna from './Component/QnA/Qna';
 
 function App() {
 

@@ -1,0 +1,13 @@
+.prevQna {
+    text-align: left;
+    width: 90%;
+    margin: 5%;
+}
+
+.question {
+    color: #8e8e8e;
+}
+
+.answer {
+    color: #e8e8e8;
+}

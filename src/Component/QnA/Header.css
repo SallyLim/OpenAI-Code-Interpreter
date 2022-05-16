@@ -1,0 +1,14 @@
+.header {
+    margin: 0;
+    padding: 0 10px;
+    height: 5vh;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    background-color: rgba(25,37,54, 0.9);
+    color:white;
+}
+
+.headerText {
+    margin: 0;
+}
