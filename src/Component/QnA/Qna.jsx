@@ -15,7 +15,7 @@ function Qna() {
     //TODO: update the values and props
     const data = {
         prompt: code + "\n" + response,
-        temperature: 0.5,
+        temperature: 0.4,
         max_tokens: 64,
         top_p: 1.0,
         frequency_penalty: 0.0,
