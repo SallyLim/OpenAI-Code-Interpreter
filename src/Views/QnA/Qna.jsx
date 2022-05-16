@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import EditorInput from './Editor';
 import './Qna.css';
 
 function Qna() {
@@ -37,9 +38,10 @@ function Qna() {
 
     return (
         <div className='flexContainer'>
-            <div>
+            <div className='flexDiv1'>
                 <label>Question:</label><br/>
-                <textarea rows = "5" cols = "60" 
+                <textarea className='textArea'
+                    rows = "5" cols = "20" 
                     placeholder="Enter question here..." 
                     value={response}
                     onChange={v => setResponse(v.target.value)}
@@ -49,13 +51,8 @@ function Qna() {
                 <button type="submit" onClick={getAnswerTest}>Submit</button>
                 <p>{APIAnswer}</p>
             </div>
-            <div>
-                <label>Code:</label><br/>
-                <textarea rows = "5" cols = "60" 
-                    placeholder="Enter code here..." 
-                    value={code}
-                    onChange={v => setCode(v.target.value)}
-                />
+            <div className='flexDiv2'>
+                <EditorInput code={code} setCode={(v) => setCode(v.target.value)}/>
             </div>
         </div>
     );
