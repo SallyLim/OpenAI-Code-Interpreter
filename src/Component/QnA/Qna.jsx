@@ -3,6 +3,7 @@ import EditorInput from "./EditorInput";
 import Header from "./Header";
 import PrevQnaLog from "./PrevQnaLog";
 import SampleQuestions from "./SampleQuestions";
+import ResizePanel from "react-resize-panel";
 
 import "./Qna.css";
 
@@ -60,28 +61,30 @@ function Qna() {
     <div>
       <Header />
       <div className="flexContainer">
-        <div className="flexDiv1">
-          <textarea
-            className="textArea"
-            rows="5"
-            cols="20"
-            placeholder="Enter question here..."
-            value={question}
-            onChange={(v) => setQuestion(v.target.value)}
-          />
-          {/* <button type="submit" onClick={getAnswer}>
+        <ResizePanel direction="e">
+          <div className="flexDiv1">
+            <textarea
+              className="textArea"
+              rows="5"
+              cols="20"
+              placeholder="Enter question here..."
+              value={question}
+              onChange={(v) => setQuestion(v.target.value)}
+            />
+            {/* <button type="submit" onClick={getAnswer}>
             Submit
           </button> */}
-          <SampleQuestions />
-          <button
-            className="submitButton"
-            type="submit"
-            onClick={getAnswerTest}
-          >
-            Submit
-          </button>
-          <PrevQnaLog qnaList={qnaList} loading={loading} />
-        </div>
+            <SampleQuestions />
+            <button
+              className="submitButton"
+              type="submit"
+              onClick={getAnswerTest}
+            >
+              Submit
+            </button>
+            <PrevQnaLog qnaList={qnaList} loading={loading} />
+          </div>
+        </ResizePanel>
         <div className="flexDiv2">
           <EditorInput code={code} setCode={setCode} />
         </div>
