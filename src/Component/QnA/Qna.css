@@ -8,6 +8,7 @@
     flex:1;
     border-right: 5px solid #46505E;
     color: white;
+    resize: horizontal;
 }
 
 .flexDiv2 {
