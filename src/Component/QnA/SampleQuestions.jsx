@@ -1,15 +1,12 @@
 import "./SampleQuestions.css";
 
-function SampleQuestions() {
+function SampleQuestions({ setQuestion }) {
   const sampleQuestions = [
     "What does this code do?",
     "What is the runtime complexity of this code?",
-    "What is the type of x",
+    "What is the type of x?",
     "What will this code print?",
   ];
-
-  //TODO: make onClick function
-  const fillQuestionTextBox = () => {};
 
   //TODO: make horizontally scrollable
   return (
@@ -18,7 +15,7 @@ function SampleQuestions() {
         <button
           className="sampleQuestionButton"
           type="button"
-          onClick={fillQuestionTextBox}
+          onClick={() => setQuestion(q)}
         >
           {q}
         </button>

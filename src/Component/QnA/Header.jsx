@@ -1,10 +1,20 @@
-import './Header.css';
+import "./Header.css";
+import { ReactComponent as HomeIcon } from "./HomeIcon.svg";
 
-function Header() {
+function Header({ language, setLanguage }) {
+  const codingLanuageDropdown = {
+    Python: "python",
+    JavaScript: "javascript",
+  };
 
+  //TODO: make Home icon clickable to go to home screen
   return (
     <div className="header">
-      <p className="headerText">Placeholder header text</p>
+      <HomeIcon />
+      <div className="headerText">
+        <p className="headerTextCheat">cheat</p>
+        <p className="headerTextCode">code</p>
+      </div>
     </div>
   );
 }

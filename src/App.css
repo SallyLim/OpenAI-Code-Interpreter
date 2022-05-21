@@ -1,3 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+
+:root {
+  --primary: #1A183D;
+  --darkPrimary1: #0E0B33;
+  --lightPrimary6: #E2E1F3;
+  --lightPrimary5: #A6A3DB;
+  --lightPrimary4: #C4C2E7;
+  --lightPrimary3: #8985CF;
+  --lightPrimary2: #4E48B7;
+  --lightPrimary1: #27245C;
+  --secondary: #FAB056;
+  --white: #FFFFFF;
+  --black: #000000;
+}
+
+* {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
 .App {
   text-align: center;
 }

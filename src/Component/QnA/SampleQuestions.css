@@ -17,9 +17,9 @@
     cursor: pointer;
 }
 
-/* TODO fix the width here after implementation of resizable window*/
+/* TODO fix the width here */
 .sampleQuestionButtonContainer {
-    width: 400px;
+    width: 350px;
     display: flex;
     overflow: scroll;
     flex-wrap: nowrap;
