@@ -5,13 +5,13 @@ import PrevQnaLog from "./PrevQnaLog";
 import SampleQuestions from "./SampleQuestions";
 
 import "./Qna.css";
+import SideNav from "./SideNav";
 
 function Qna() {
   const [code, setCode] = useState("");
   const [question, setQuestion] = useState("");
   const [qnaList, setQnaList] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [language, setLanguage] = useState("python");
 
   //TODO: update the values and props
   const data = {
@@ -59,8 +59,9 @@ function Qna() {
 
   return (
     <div>
-      <Header language={language} setLanguage={setLanguage} />
+      <Header />
       <div className="flexContainer">
+        <SideNav />
         <div className="flexDiv1">
           <textarea
             className="textArea"
@@ -84,7 +85,7 @@ function Qna() {
           <PrevQnaLog qnaList={qnaList} loading={loading} />
         </div>
         <div className="flexDiv2">
-          <EditorInput code={code} setCode={setCode} language={language} />
+          <EditorInput code={code} setCode={setCode} />
         </div>
       </div>
     </div>

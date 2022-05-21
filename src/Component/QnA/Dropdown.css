@@ -1,0 +1,21 @@
+.mask {
+    /* background-color: none; */
+    width: 100vw;
+    height: 100vh;
+    top:0px;
+    left:0px;
+    position: absolute;
+    z-index: 1000;
+    
+}
+
+.menu{
+    position: absolute;
+    z-index: 1001;
+    background-color: var(--offwhite);
+    color: var(--primary)
+}
+
+.dropdownButton {
+    display: flex;
+}

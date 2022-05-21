@@ -1,7 +1,7 @@
 import "./Header.css";
 import { ReactComponent as HomeIcon } from "./HomeIcon.svg";
 
-function Header({ language, setLanguage }) {
+function Header() {
   const codingLanuageDropdown = {
     Python: "python",
     JavaScript: "javascript",

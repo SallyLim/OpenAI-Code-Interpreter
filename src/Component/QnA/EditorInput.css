@@ -1,0 +1,7 @@
+.editor {
+    height: calc(100vh - 60px);  
+    resize: vertical;
+    overflow: auto;
+}
+/* TODO: font size and family change
+also fix height */

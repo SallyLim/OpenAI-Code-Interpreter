@@ -6,6 +6,8 @@
     display: flex;
     align-items: center;
     background-color: var(--primary);
+    border-bottom: 1px solid rgba(196, 194, 231, 0.3);
+
 }
 
 .headerText {
@@ -16,7 +18,7 @@
 
 .headerTextCheat {
     display: inline;
-    color: var(--lightPrimary6)
+    color: var(--offwhite)
 }
 
 .headerTextCode {

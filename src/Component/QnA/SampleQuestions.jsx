@@ -8,9 +8,11 @@ function SampleQuestions({ setQuestion }) {
     "What will this code print?",
   ];
 
-  //TODO: make horizontally scrollable
   return (
-    <div className="sampleQuestionButtonContainer">
+    <div
+      className="sampleQuestionButtonContainer"
+      width="${(Dimensions.get('window').width)}px;"
+    >
       {sampleQuestions.map((q) => (
         <button
           className="sampleQuestionButton"

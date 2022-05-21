@@ -1,14 +1,13 @@
 .flexContainer {
     display: flex;
-    width: 100%;
-    background-color: #192536;
+    height: calc(100vh - 60px);
 }
 
 .flexDiv1{
-    width: 400px;
-    border-right: 5px solid #46505E;
-    color: white;
-    resize: horizontal;
+    width: 500px;
+    border-right: 1px solid rgba(196, 194, 231, 0.3);
+    color: var(--white);
+    background-color: var(--darkPrimary1);
 }
 
 .flexDiv2 {
@@ -16,16 +15,15 @@
 }
 
 .textArea {
-    margin: 10px 0px;
-    padding: 0;
-    width: 90%;
-    border-color: white;
+    margin: 10px 5% 10px 5%;
+    padding: 10px;
+    width: 85%;
+    border-color: var(--offwhite);
     background-color: inherit;
     resize: none;
-    color: white;
+    color: var(--offwhite);
     overflow-y: scroll;
 }
-
 
 .textArea::placeholder {
     color: #616161;
@@ -34,7 +32,12 @@
 .submitButton {
     width: 90%;
     height: 35px;
-    background-color: #4285F4;
-    color: white;
+    background-color: var(--secondary);
+    color: var(--darkPrimary1);
     border: 0;
+}
+
+.submitButton:hover {
+    cursor: pointer;
+    background-color: var(--secondaryHover);
 }

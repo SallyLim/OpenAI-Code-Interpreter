@@ -1,7 +1,7 @@
 .sampleQuestionButton {
     background-color: inherit;
-    color: white;
-    border: 2px white solid;
+    color: var(--offwhite);
+    border: 2px var(--offwhite) solid;
     border-radius: 15px;
     font-size: 12px;
     margin-bottom: 10px;
@@ -11,15 +11,14 @@
 }
 
 .sampleQuestionButton:hover {
-    background-color: white;
-    color: #46505E;
-    border: 2px #46505E solid;
+    background-color: var(--offwhite);
+    color: var(--primary);
     cursor: pointer;
 }
 
 /* TODO fix the width here */
 .sampleQuestionButtonContainer {
-    width: 350px;
+    width: 90%;
     display: flex;
     overflow: scroll;
     flex-wrap: nowrap;
