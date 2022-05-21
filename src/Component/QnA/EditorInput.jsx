@@ -24,12 +24,21 @@ function EditorInput({ code, setCode }) {
     return () => window.removeEventListener("resize", handleResize);
   }, [ref]);
 
+  //TODO: change monaco editor background color to --primary
   return (
     <div>
-      <div>
-        <Dropdown>
+      <div className="dropdownContainer">
+        <Dropdown currentLanguage={languageMap[language]}>
           {Object.entries(languageMap).map(([key, value]) => {
-            return <div onClick={() => setLanguage(key)}>{value}</div>;
+            return (
+              <div
+                className="menuItem"
+                key={key}
+                onClick={() => setLanguage(key)}
+              >
+                {value}
+              </div>
+            );
           })}
         </Dropdown>
       </div>

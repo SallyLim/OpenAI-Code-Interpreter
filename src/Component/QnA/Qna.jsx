@@ -52,7 +52,7 @@ function Qna() {
     let testAnswer = "Test answer " + Math.random().toString();
 
     const x = qnaList.map((x) => x);
-    x.push([code + "\n" + question, testAnswer]);
+    x.push([code, question, testAnswer]);
     setQnaList(x);
     setQuestion("");
   };
@@ -71,9 +71,6 @@ function Qna() {
             value={question}
             onChange={(v) => setQuestion(v.target.value)}
           />
-          {/* <button type="submit" onClick={getAnswer}>
-            Submit
-          </button> */}
           <SampleQuestions setQuestion={setQuestion} />
           <button
             className="submitButton"
@@ -82,6 +79,9 @@ function Qna() {
           >
             Submit
           </button>
+          {/* <button type="submit" onClick={getAnswer}>
+            Submit
+          </button> */}
           <PrevQnaLog qnaList={qnaList} loading={loading} />
         </div>
         <div className="flexDiv2">

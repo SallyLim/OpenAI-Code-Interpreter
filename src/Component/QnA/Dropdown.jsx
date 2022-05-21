@@ -1,13 +1,15 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import "./Dropdown.css";
+import { ReactComponent as ArrowDown } from "./ArrowDown.svg";
 
-function Dropdown({ children }) {
+function Dropdown({ children, currentLanguage }) {
   const [visible, setVisible] = useState(false);
 
   return (
     <div>
       <button className="dropdownButton" onClick={() => setVisible(true)}>
-        Test
+        {currentLanguage}
+        <ArrowDown className="arrowDown" />
       </button>
       {visible && (
         <div className="menu" onClick={() => setVisible(false)}>

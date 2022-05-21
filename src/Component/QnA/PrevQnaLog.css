@@ -5,9 +5,9 @@
 }
 
 .question {
-    color: #8e8e8e;
+    color: var(--lightPrimary5);
 }
 
 .answer {
-    color: #e8e8e8;
+    color: var(--offwhite);
 }

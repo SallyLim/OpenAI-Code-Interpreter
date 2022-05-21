@@ -1,7 +1,24 @@
 .editor {
-    height: calc(100vh - 60px);  
+    height: calc(100vh - 60px - 40px);  
     resize: vertical;
     overflow: auto;
 }
-/* TODO: font size and family change
-also fix height */
+/* TODO: font size change */
+
+.dropdownContainer {
+    height: 40px;
+    background-color: var(--darkPrimary1);
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.menuItem {
+    padding: 5px;
+    border-bottom: 1px solid var(--darkPrimary1);
+}
+
+.menuItem:hover {
+    background-color: var(--lightPrimary5);
+    cursor: pointer;
+}

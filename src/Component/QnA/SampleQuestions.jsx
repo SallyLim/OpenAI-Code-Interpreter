@@ -13,8 +13,9 @@ function SampleQuestions({ setQuestion }) {
       className="sampleQuestionButtonContainer"
       width="${(Dimensions.get('window').width)}px;"
     >
-      {sampleQuestions.map((q) => (
+      {sampleQuestions.map((q, index) => (
         <button
+          key={index}
           className="sampleQuestionButton"
           type="button"
           onClick={() => setQuestion(q)}
