@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import Editor from "@monaco-editor/react";
-import Dropdown from "./Dropdown";
+import Dropdown from "../Dropdown";
 import "./EditorInput.css";
 
 function EditorInput({ code, setCode }) {
@@ -28,7 +28,7 @@ function EditorInput({ code, setCode }) {
   return (
     <div>
       <div className="dropdownContainer">
-        <Dropdown currentLanguage={languageMap[language]}>
+        <Dropdown currentSelection={languageMap[language]}>
           {Object.entries(languageMap).map(([key, value]) => {
             return (
               <div

@@ -1,0 +1,15 @@
+.sortingContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+}
+.sortedBy {
+    font-size: 12px;
+}
+
+.menuItem {
+    padding: 5px;
+    border-bottom: 1px solid var(--darkPrimary1);
+    cursor: pointer;
+}

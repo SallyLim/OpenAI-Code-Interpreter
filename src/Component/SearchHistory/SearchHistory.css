@@ -1,0 +1,16 @@
+.flexContainer {
+    display: flex;
+    height: calc(100vh - 60px);
+}
+
+.flexDiv1{
+    width: 500px;
+    border-right: 1px solid rgba(196, 194, 231, 0.3);
+    color: var(--white);
+    background-color: var(--darkPrimary1);
+}
+
+.flexDiv2 {
+    width: 100%;
+    background-color: var(--primary);
+}

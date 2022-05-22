@@ -1,11 +1,11 @@
 import { useState } from "react";
 import EditorInput from "./EditorInput";
-import Header from "./Header";
+import Header from "../Header";
 import PrevQnaLog from "./PrevQnaLog";
 import SampleQuestions from "./SampleQuestions";
 
 import "./Qna.css";
-import SideNav from "./SideNav";
+import SideNav from "../SideNav";
 
 function Qna() {
   const [code, setCode] = useState("");
@@ -38,10 +38,13 @@ function Qna() {
       }
     );
     const body = await answer.json();
+    let time = new Date().toLocaleString("en-US", {
+      timeZone: "America/Los_Angeles",
+    });
 
     setLoading(false);
     const copy = qnaList.map((x) => x);
-    copy.push([code, question, body.choices[0].text]);
+    copy.push([code, question, body.choices[0].text, time]);
     setQnaList(copy);
 
     setQuestion("");
@@ -51,8 +54,12 @@ function Qna() {
   const getAnswerTest = () => {
     let testAnswer = "Test answer " + Math.random().toString();
 
+    let time = new Date().toLocaleString("en-US", {
+      timeZone: "America/Los_Angeles",
+    });
+
     const x = qnaList.map((x) => x);
-    x.push([code, question, testAnswer]);
+    x.push([code, question, testAnswer, time]);
     setQnaList(x);
     setQuestion("");
   };

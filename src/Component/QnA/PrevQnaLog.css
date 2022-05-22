@@ -2,6 +2,21 @@
     text-align: left;
     width: 90%;
     margin: 5%;
+    height: calc(100vh - 60px - 250px);
+    overflow-y: scroll;
+}
+.prevQna::-webkit-scrollbar {
+    width: 8px;
+}
+
+.prevQna::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: var(--lightPrimary1);
+}
+
+.prevQna::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: black;
 }
 
 .question {
