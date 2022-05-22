@@ -7,6 +7,7 @@ import SampleCode from "./SampleCode";
 function EditorInput({ code, setCode, language, setLanguage }) {
   const ref = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
+  const [selectedCode, setSelectedCode] = useState(undefined);
 
   const languageMap = {
     python: "Python",
@@ -26,6 +27,27 @@ function EditorInput({ code, setCode, language, setLanguage }) {
     return () => window.removeEventListener("resize", handleResize);
   }, [ref]);
 
+  useEffect(() => {
+    if (selectedCode !== undefined) {
+      setLanguage(selectedCode.language);
+      setCode(selectedCode.code);
+    }
+  }, [selectedCode]);
+
+  useEffect(() => {
+    if (language === "python") {
+      setCode(
+        code.replace("// Enter code here...\n", "# Enter code here...\n")
+      );
+      console.log(code);
+    } else {
+      setCode(
+        code.replace("# Enter code here...\n", "// Enter code here...\n")
+      );
+      console.log(code);
+    }
+  }, [language]);
+
   return (
     <>
       <div className="dropdownContainer">
@@ -42,10 +64,16 @@ function EditorInput({ code, setCode, language, setLanguage }) {
             );
           })}
         </Dropdown>
-        <button onClick={() => setIsOpen(true)}>Select Sample Code</button>
+        <button className="selectSampleCode" onClick={() => setIsOpen(true)}>
+          Select Sample Code
+        </button>
       </div>
       {isOpen ? (
-        <SampleCode setIsOpen={setIsOpen} />
+        <SampleCode
+          setIsOpen={setIsOpen}
+          selectedCode={selectedCode}
+          setSelectedCode={setSelectedCode}
+        />
       ) : (
         <div className="editorParent">
           <Editor
@@ -64,7 +92,11 @@ function EditorInput({ code, setCode, language, setLanguage }) {
             }}
             className="editor"
             language={language}
-            defaultValue="# Enter code here..."
+            defaultValue={
+              (language === "python"
+                ? "# Enter code here...\n"
+                : "// Enter code here...\n") + (selectedCode?.code ?? "")
+            }
             value={code}
             onChange={(value) => setCode(value)}
           />
@@ -75,3 +107,5 @@ function EditorInput({ code, setCode, language, setLanguage }) {
 }
 
 export default EditorInput;
+
+//useEffe

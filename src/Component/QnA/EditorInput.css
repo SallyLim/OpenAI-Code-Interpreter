@@ -10,6 +10,7 @@
     display: flex;
     align-items: center;
     padding-left: 20px;
+    justify-content: space-between;
 }
 
 .menuItem {
@@ -25,4 +26,18 @@
 .editorParent {
     background-color: var(--darkPrimary1);
     flex: 1;
+}
+
+.selectSampleCode {
+    height: 25px;
+    width: 150px;
+    background-color: var(--secondary);
+    color: var(--primary);
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.selectSampleCode:hover {
+    background-color: var(--secondaryHover);
 }

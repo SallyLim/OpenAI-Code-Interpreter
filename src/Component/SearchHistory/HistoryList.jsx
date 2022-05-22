@@ -34,7 +34,8 @@ function HeaderList({
                 <p className="itemDescription">
                   {x.code
                     .replace(/# Enter code here...\n/g, "")
-                    .split("\n")[0] + "..."}
+                    .split("\n")
+                    .find((el) => el !== "") + "..."}
                 </p>
               </div>
               <div className="historyItem">

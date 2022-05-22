@@ -9,7 +9,7 @@ import SideNav from "../SideNav";
 import useLocalStorage from "../useLocalStorage";
 
 function Qna() {
-  const [code, setCode] = useState("");
+  const [code, setCode] = useState("# Enter code here...\n");
   const [question, setQuestion] = useState("");
   const [qnaList, setQnaList] = useLocalStorage("history", []);
   const [loading, setLoading] = useState(false);

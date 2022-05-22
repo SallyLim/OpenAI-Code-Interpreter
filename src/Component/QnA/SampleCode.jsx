@@ -1,7 +1,9 @@
 import Editor from "@monaco-editor/react";
+import classNames from "classnames";
+import { useState } from "react";
 import "./SampleCode.css";
 
-function SampleCode({ setIsOpen }) {
+function SampleCode({ setIsOpen, selectedCode, setSelectedCode }) {
   const sampleCode = [
     {
       code: `num = int(input("Enter a number: "))\nif (num % 2) == 0:\nprint("{0} is Even".format(num))\nelse:\nprint("{0} is Odd".format(num))`,
@@ -25,10 +27,19 @@ function SampleCode({ setIsOpen }) {
     <div className="sampleCodeContainer">
       <div className="sampleCodes">
         {sampleCode.map((sample) => (
-          <div>
+          <div className="sampleCodeItemContainer">
+            <div
+              className={classNames("selectMask", {
+                selectedMask: selectedCode?.code === sample.code,
+              })}
+              onClick={() => {
+                console.log(sample);
+                setSelectedCode(sample);
+              }}
+            />
             <Editor
               className="sampleCodeItem"
-              height="200px"
+              height="185px"
               width="400px"
               value={sample.code}
               onMount={(editor, monaco) => {
@@ -46,13 +57,26 @@ function SampleCode({ setIsOpen }) {
               fontSize="10px"
               options={{ readOnly: true }}
             />
-            <div className="selectMask" />
           </div>
         ))}
       </div>
       <div className="buttonContainer">
-        <button className="select">Select</button>
-        <button className="cancel" onClick={() => setIsOpen(false)}>
+        <button
+          className="select"
+          onClick={() => {
+            setIsOpen(false);
+            setSelectedCode(undefined);
+          }}
+        >
+          Select
+        </button>
+        <button
+          className="cancel"
+          onClick={() => {
+            setIsOpen(false);
+            setSelectedCode(undefined);
+          }}
+        >
           Cancel
         </button>
       </div>
