@@ -1,0 +1,44 @@
+.sampleCodeContainer {
+    background-color: var(--primary);
+    height: 100vh;
+    padding: 20px;
+}
+
+.sampleCodeItem {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sampleCodes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.select {
+    background-color: var(--secondary);
+    color: var(--primary);
+    border: none;
+}
+
+.cancel {
+    background-color: var(--primary);
+    color: var(--offwhite);
+    border: 1px solid var(--offwhite);
+    
+}
+
+.buttonContainer {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+
+}
+
+.selectMask {
+    height:200px;
+    width:400px;
+    background-color: brown;
+}

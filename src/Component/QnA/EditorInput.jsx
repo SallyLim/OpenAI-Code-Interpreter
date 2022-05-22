@@ -2,9 +2,11 @@ import { useState, useEffect, useRef } from "react";
 import Editor from "@monaco-editor/react";
 import Dropdown from "../Dropdown";
 import "./EditorInput.css";
+import SampleCode from "./SampleCode";
 
 function EditorInput({ code, setCode, language, setLanguage }) {
   const ref = useRef(null);
+  const [isOpen, setIsOpen] = useState(false);
 
   const languageMap = {
     python: "Python",
@@ -40,29 +42,34 @@ function EditorInput({ code, setCode, language, setLanguage }) {
             );
           })}
         </Dropdown>
+        <button onClick={() => setIsOpen(true)}>Select Sample Code</button>
       </div>
-      <div className="editorParent">
-        <Editor
-          onMount={(editor, monaco) => {
-            monaco.editor.defineTheme("customTheme", {
-              base: "vs-dark",
-              inherit: true,
-              rules: [],
-              colors: {
-                "editor.background": "#1A183D",
-              },
-            });
-            monaco.editor.setTheme("customTheme");
+      {isOpen ? (
+        <SampleCode setIsOpen={setIsOpen} />
+      ) : (
+        <div className="editorParent">
+          <Editor
+            onMount={(editor, monaco) => {
+              monaco.editor.defineTheme("customTheme", {
+                base: "vs-dark",
+                inherit: true,
+                rules: [],
+                colors: {
+                  "editor.background": "#1A183D",
+                },
+              });
+              monaco.editor.setTheme("customTheme");
 
-            ref.current = editor;
-          }}
-          className="editor"
-          language={language}
-          defaultValue="# Enter code here..."
-          value={code}
-          onChange={(value) => setCode(value)}
-        />
-      </div>
+              ref.current = editor;
+            }}
+            className="editor"
+            language={language}
+            defaultValue="# Enter code here..."
+            value={code}
+            onChange={(value) => setCode(value)}
+          />
+        </div>
+      )}
     </>
   );
 }
