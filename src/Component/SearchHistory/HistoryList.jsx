@@ -1,11 +1,10 @@
 import "./HistoryList.css";
-import useLocalStorage from "../useLocalStorage";
 
-function HeaderList() {
-  const [qnaList, setQnaList] = useLocalStorage("history", []);
-
+function HeaderList({ qnaList }) {
   //TODO: add clear history button
   //TODO: limit the shown to 25
+  //TODO: add sorting mechanism from the dropdown selection
+  //TODO: need to be selectable with css and functionality
   return (
     <div>
       <div className="historyListContainer">
@@ -21,7 +20,10 @@ function HeaderList() {
             </div>
             <div className="historyItem">
               <p className="itemHeader">Code</p>
-              <p className="itemDescription">{x.code}</p>
+              <p className="itemDescription">
+                {x.code.replace(/# Enter code here...\n/g, "").split("\n")[0] +
+                  "..."}
+              </p>
             </div>
             <div className="historyItem">
               <p className="itemHeader">Time</p>
