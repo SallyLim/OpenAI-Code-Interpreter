@@ -21,3 +21,8 @@
     background-color: var(--lightPrimary5);
     cursor: pointer;
 }
+
+.editorParent {
+    background-color: var(--darkPrimary1);
+    flex: 1;
+}

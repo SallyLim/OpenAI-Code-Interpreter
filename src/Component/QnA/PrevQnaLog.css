@@ -1,28 +1,33 @@
-.prevQna {
+.prevQnaContainer {
     text-align: left;
     width: 90%;
     margin: 5%;
     height: calc(100vh - 60px - 250px);
     overflow-y: scroll;
+    font-size: 14px;
 }
-.prevQna::-webkit-scrollbar {
+.prevQnaContainer::-webkit-scrollbar {
     width: 8px;
 }
 
-.prevQna::-webkit-scrollbar-track {
+.prevQnaContainer::-webkit-scrollbar-track {
     border-radius: 10px;
     background-color: var(--lightPrimary1);
 }
 
-.prevQna::-webkit-scrollbar-thumb {
+.prevQnaContainer::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background-color: black;
 }
 
 .question {
+    margin-top: 30px;
+
     color: var(--lightPrimary5);
 }
 
 .answer {
     color: var(--offwhite);
+    margin-bottom: 30px;
+
 }

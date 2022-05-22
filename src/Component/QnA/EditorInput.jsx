@@ -25,7 +25,7 @@ function EditorInput({ code, setCode, language, setLanguage }) {
   }, [ref]);
 
   return (
-    <div>
+    <>
       <div className="dropdownContainer">
         <Dropdown currentSelection={languageMap[language]}>
           {Object.entries(languageMap).map(([key, value]) => {
@@ -63,7 +63,7 @@ function EditorInput({ code, setCode, language, setLanguage }) {
           onChange={(value) => setCode(value)}
         />
       </div>
-    </div>
+    </>
   );
 }
 

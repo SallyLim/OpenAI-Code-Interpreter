@@ -5,7 +5,7 @@
     text-align: left;
     display: flex;
     align-items: center;
-    background-color: var(--primary);
+    background-color: var(--darkPrimary1);
     border-bottom: 1px solid rgba(196, 194, 231, 0.3);
 
 }
