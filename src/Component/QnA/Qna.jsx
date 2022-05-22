@@ -6,11 +6,12 @@ import SampleQuestions from "./SampleQuestions";
 
 import "./Qna.css";
 import SideNav from "../SideNav";
+import useLocalStorage from "../useLocalStorage";
 
 function Qna() {
   const [code, setCode] = useState("");
   const [question, setQuestion] = useState("");
-  const [qnaList, setQnaList] = useState([]);
+  const [qnaList, setQnaList] = useLocalStorage("history", []);
   const [loading, setLoading] = useState(false);
 
   //TODO: update the values and props
@@ -44,7 +45,13 @@ function Qna() {
 
     setLoading(false);
     const copy = qnaList.map((x) => x);
-    copy.push([code, question, body.choices[0].text, time]);
+    let searchHistoryObject = {
+      code,
+      question,
+      answer: body.choices[0].text,
+      time,
+    };
+    copy.push(searchHistoryObject);
     setQnaList(copy);
 
     setQuestion("");
@@ -58,9 +65,15 @@ function Qna() {
       timeZone: "America/Los_Angeles",
     });
 
-    const x = qnaList.map((x) => x);
-    x.push([code, question, testAnswer, time]);
-    setQnaList(x);
+    const copy = qnaList.map((x) => x);
+    let searchHistoryObject = {
+      code,
+      question,
+      answer: testAnswer,
+      time,
+    };
+    copy.push(searchHistoryObject);
+    setQnaList(copy);
     setQuestion("");
   };
 

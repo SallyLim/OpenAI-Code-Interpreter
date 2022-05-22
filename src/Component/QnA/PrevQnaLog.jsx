@@ -6,8 +6,8 @@ function PrevQnaLog({ qnaList, loading }) {
     <div className="prevQna">
       {qnaList.map((x, index) => (
         <div key={index}>
-          <p className="question">Q: {x[1]}</p>
-          <p className="answer">A: {x[2]}</p>
+          <p className="question">Q: {x.question}</p>
+          <p className="answer">A: {x.answer}</p>
         </div>
       ))}
       {loading ? <p>loading...</p> : <div />}
