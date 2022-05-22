@@ -1,0 +1,4 @@
+.historyDetailContainer {
+    min-width: 500px;
+    overflow: scroll;
+}
