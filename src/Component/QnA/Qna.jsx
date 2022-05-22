@@ -18,48 +18,44 @@ function Qna() {
   //TODO: update the values and props
   const data = {
     prompt: code + "\n" + question,
-    temperature: 0.4,
+    temperature: 0,
     max_tokens: 64,
-    top_p: 1.0,
-    frequency_penalty: 0.0,
-    presence_penalty: 0.0,
   };
 
-  //TODO: update
-  const getAnswer = async () => {
-    setLoading(true);
-    const answer = await fetch(
-      "https://api.openai.com/v1/engines/text-curie-001/completions",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${process.env.REACT_APP_OPENAI_KEY}`,
-        },
-        body: JSON.stringify(data),
-      }
-    );
-    const body = await answer.json();
-    let time = new Date().toLocaleString("en-US", {
-      timeZone: "America/Los_Angeles",
-    });
+  // const getAnswer = async () => {
+  //   setLoading(true);
+  //   const answer = await fetch(
+  //     "https://api.openai.com/v1/engines/text-davinci-001/completions",
+  //     {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //         Authorization: `Bearer ${process.env.REACT_APP_OPENAI_KEY}`,
+  //       },
+  //       body: JSON.stringify(data),
+  //     }
+  //   );
+  //   const body = await answer.json();
+  //   let time = new Date().toLocaleString("en-US", {
+  //     timeZone: "America/Los_Angeles",
+  //   });
 
-    setLoading(false);
-    const copy = qnaList.map((x) => x);
-    let searchHistoryObject = {
-      code,
-      question,
-      answer: body.choices[0].text,
-      time,
-      language,
-    };
-    copy.push(searchHistoryObject);
-    setQnaList(copy);
+  //   setLoading(false);
+  //   const copy = qnaList.map((x) => x);
+  //   let searchHistoryObject = {
+  //     code,
+  //     question,
+  //     answer: body.choices[0].text,
+  //     time,
+  //     language,
+  //   };
+  //   copy.push(searchHistoryObject);
+  //   setQnaList(copy);
 
-    setQuestion("");
-  };
+  //   setQuestion("");
+  // };
 
-  //TODO: eventually delete
+  // TODO: eventually delete
   const getAnswerTest = () => {
     let testAnswer = "Test answer " + Math.random().toString();
 
@@ -102,7 +98,7 @@ function Qna() {
           >
             Submit
           </button>
-          {/* <button type="submit" onClick={getAnswer}>
+          {/* <button className="submitButton" type="submit" onClick={getAnswer}>
             Submit
           </button> */}
           <PrevQnaLog qnaList={qnaList} loading={loading} />
