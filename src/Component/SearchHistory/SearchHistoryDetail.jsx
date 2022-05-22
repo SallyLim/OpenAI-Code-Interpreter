@@ -6,8 +6,10 @@ function SearchHistoryDetail({ selectedHistoryItem }) {
     <div className="historyDetailContainer">
       {selectedHistoryItem !== undefined ? (
         <div>
-          <h3>Question submitted on {selectedHistoryItem.time}</h3>
-          <h4>Code</h4>
+          <p className="questionSubmissionTimeHeader">
+            Submission at {selectedHistoryItem.time}
+          </p>
+          <h4 className="detailHistoryItemTitle">Code</h4>
           <Editor
             onMount={(editor, monaco) => {
               monaco.editor.defineTheme("customTheme", {
@@ -29,10 +31,14 @@ function SearchHistoryDetail({ selectedHistoryItem }) {
               ""
             )}
           />
-          <h4>Question</h4>
-          <p>{selectedHistoryItem.question}</p>
-          <h4>Answer</h4>
-          <p>{selectedHistoryItem.answer}</p>
+          <h4 className="detailHistoryItemTitle">Question</h4>
+          <p className="detailHistoryItemDescription">
+            {selectedHistoryItem.question}
+          </p>
+          <h4 className="detailHistoryItemTitle">Answer</h4>
+          <p className="detailHistoryItemDescription">
+            {selectedHistoryItem.answer}
+          </p>
         </div>
       ) : (
         <div />

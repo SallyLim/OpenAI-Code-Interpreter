@@ -25,7 +25,6 @@ function EditorInput({ code, setCode, language, setLanguage }) {
     return () => window.removeEventListener("resize", handleResize);
   }, [ref]);
 
-  //TODO: change monaco editor background color to --primary
   return (
     <div>
       <div className="dropdownContainer">

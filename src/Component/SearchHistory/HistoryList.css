@@ -25,8 +25,6 @@
     font-size: 12px;
 }
 
-/* TODO: selected history item color change and add hover state and curser pointer*/
-
 .itemHeader {
     flex: 1;
     text-align: left;

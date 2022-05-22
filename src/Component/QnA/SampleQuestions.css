@@ -16,7 +16,6 @@
     cursor: pointer;
 }
 
-/* TODO fix the width here */
 .sampleQuestionButtonContainer {
     width: 90%;
     display: flex;

@@ -51,6 +51,7 @@ function Qna() {
       question,
       answer: body.choices[0].text,
       time,
+      language,
     };
     copy.push(searchHistoryObject);
     setQnaList(copy);

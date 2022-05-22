@@ -1,6 +1,9 @@
 .historyDetailContainer {
     min-width: 500px;
     overflow: scroll;
+    text-align: left;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .monaco-editor {
@@ -9,5 +12,23 @@
 
 .codeViewer {
     overflow: scroll;
-    margin: 0 50px;
+}
+
+.detailHistoryItemTitle {
+    color: var(--lightPrimary5);
+    font-size: 12px;
+}
+
+.detailHistoryItemDescription {
+    color: var(--offwhite);
+    padding: 20px;
+    background-color: var(--lightPrimary1);
+    font-size: 12px;
+}
+
+.questionSubmissionTimeHeader {
+    font-size: 12px;
+    color: var(--secondary);
+    text-align: right;
+    margin-top: 20px;
 }

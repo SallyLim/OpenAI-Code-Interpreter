@@ -13,7 +13,7 @@
 .flexDiv2Search {
     flex: 1;
     overflow-x: scroll;
-    background-color: var(--primary);
+    background-color: var(--darkPrimary1);
 }
 
 .historyListHeader {
