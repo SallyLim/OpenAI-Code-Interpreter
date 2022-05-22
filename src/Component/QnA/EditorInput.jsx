@@ -16,6 +16,7 @@ function EditorInput({ code, setCode }) {
     if (ref === null) {
       return;
     }
+
     function handleResize() {
       ref.current.layout({});
     }
@@ -44,9 +45,20 @@ function EditorInput({ code, setCode }) {
       </div>
       <div className="editorParent">
         <Editor
-          onMount={(editor) => (ref.current = editor)}
+          onMount={(editor, monaco) => {
+            monaco.editor.defineTheme("customTheme", {
+              base: "vs-dark",
+              inherit: true,
+              rules: [],
+              colors: {
+                "editor.background": "#1A183D",
+              },
+            });
+            monaco.editor.setTheme("customTheme");
+
+            ref.current = editor;
+          }}
           className="editor"
-          theme="vs-dark"
           defaultLanguage={language}
           defaultValue="# Enter code here..."
           value={code}

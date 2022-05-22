@@ -4,4 +4,10 @@
     height: 24px;
     color: var(--primary);
     padding: 0 12px;
+    cursor: pointer;
+}
+
+.clearHistoryButton:hover {
+    background-color: #CAC3DA;
+
 }

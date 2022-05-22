@@ -2,3 +2,12 @@
     min-width: 500px;
     overflow: scroll;
 }
+
+.monaco-editor {
+    padding-top: 15px;
+}
+
+.codeViewer {
+    overflow: scroll;
+    margin: 0 50px;
+}
