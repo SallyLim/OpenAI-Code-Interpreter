@@ -7359,7 +7359,7 @@
   optionalDependencies:
     "fsevents" "^2.3.2"
 
-"react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^18.0.0", "react@^18.1.0", "react@>= 16", "react@>=16.8":
+"react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.9.0", "react@^18.0.0", "react@^18.1.0", "react@>= 16", "react@>=16.8":
   "integrity" "sha512-4oL8ivCz5ZEPyclFQXaNksK3adutVS8l2xzZU0cqEFrE9Sb7fC0EFK5uEk74wIreL1DERyjvsU915j1pcT2uEQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.1.0.tgz"
   "version" "18.1.0"
@@ -8526,6 +8526,11 @@
   "version" "4.4.1"
   dependencies:
     "punycode" "^2.1.0"
+
+"use-dencrypt-effect@^1.0.2":
+  "integrity" "sha512-HfgvcQAUEoqSrAHiHrZL4stw5qc3JIDpN4lsYlcBa9WtOy4RKG03WlZ1Iq9k1OMOV3D2WiI0AFL8uIXWzYWHFA=="
+  "resolved" "https://registry.npmjs.org/use-dencrypt-effect/-/use-dencrypt-effect-1.0.2.tgz"
+  "version" "1.0.2"
 
 "util-deprecate@^1.0.1", "util-deprecate@^1.0.2", "util-deprecate@~1.0.1":
   "integrity" "sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8="

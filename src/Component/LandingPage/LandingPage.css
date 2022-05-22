@@ -5,6 +5,7 @@
 }
 
 .landingPageHeader {
+    min-height: 83px;
     color: var(--offwhite);
     font-size: 64px;
     margin-top:25vh;
@@ -15,7 +16,7 @@
     color: var(--lightPrimary5);
     margin-top: 4px;
     margin-bottom: 6vh;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .getStartedButton {
