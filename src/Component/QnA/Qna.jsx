@@ -13,6 +13,7 @@ function Qna() {
   const [question, setQuestion] = useState("");
   const [qnaList, setQnaList] = useLocalStorage("history", []);
   const [loading, setLoading] = useState(false);
+  const [language, setLanguage] = useLocalStorage("language", "python");
 
   //TODO: update the values and props
   const data = {
@@ -71,6 +72,7 @@ function Qna() {
       question,
       answer: testAnswer,
       time,
+      language,
     };
     copy.push(searchHistoryObject);
     setQnaList(copy);
@@ -105,7 +107,12 @@ function Qna() {
           <PrevQnaLog qnaList={qnaList} loading={loading} />
         </div>
         <div className="flexDiv2">
-          <EditorInput code={code} setCode={setCode} />
+          <EditorInput
+            code={code}
+            setCode={setCode}
+            language={language}
+            setLanguage={setLanguage}
+          />
         </div>
       </div>
     </div>

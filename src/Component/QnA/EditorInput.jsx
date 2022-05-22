@@ -2,10 +2,10 @@ import { useState, useEffect, useRef } from "react";
 import Editor from "@monaco-editor/react";
 import Dropdown from "../Dropdown";
 import "./EditorInput.css";
+import useLocalStorage from "../useLocalStorage";
 
-function EditorInput({ code, setCode }) {
+function EditorInput({ code, setCode, language, setLanguage }) {
   const ref = useRef(null);
-  const [language, setLanguage] = useState("python");
 
   const languageMap = {
     python: "Python",
@@ -59,7 +59,7 @@ function EditorInput({ code, setCode }) {
             ref.current = editor;
           }}
           className="editor"
-          defaultLanguage={language}
+          language={language}
           defaultValue="# Enter code here..."
           value={code}
           onChange={(value) => setCode(value)}

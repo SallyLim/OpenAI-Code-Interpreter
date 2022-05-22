@@ -22,7 +22,7 @@ function SearchHistoryDetail({ selectedHistoryItem }) {
             }}
             className="codeViewer"
             height="250px"
-            defaultLanguage="python"
+            language={selectedHistoryItem.language}
             options={{ readOnly: true }}
             value={selectedHistoryItem.code.replace(
               /# Enter code here...\n/g,
