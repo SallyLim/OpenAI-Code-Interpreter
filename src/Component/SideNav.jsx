@@ -1,22 +1,35 @@
 import "./SideNav.css";
 import { ReactComponent as Robot } from "./Robot.svg";
 import { ReactComponent as History } from "./History.svg";
+import { NavLink } from "react-router-dom";
 
 function SideNav() {
-  //TODO: link the icons to the appropriate pages
-  // add highlight to the current page
   return (
     <div className="flex">
-      <div className="navButton">
-        <a>
+      <NavLink
+        to="/ai"
+        style={({ isActive }) =>
+          isActive
+            ? { backgroundColor: "var(--lightPrimary2)" }
+            : { backgroundColor: "inherit" }
+        }
+      >
+        <div className="navButton">
           <Robot />
-        </a>
-      </div>
-      <div className="navButton">
-        <a>
+        </div>
+      </NavLink>
+      <NavLink
+        to="/history"
+        style={({ isActive }) =>
+          isActive
+            ? { backgroundColor: "var(--lightPrimary2)" }
+            : { backgroundColor: "inherit" }
+        }
+      >
+        <div className="navButton">
           <History />
-        </a>
-      </div>
+        </div>
+      </NavLink>
     </div>
   );
 }

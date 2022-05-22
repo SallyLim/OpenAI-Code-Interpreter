@@ -1,0 +1,51 @@
+.historyList {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--lightPrimary1);
+    margin: 0px 10px 20px 20px;
+    padding: 7px 20px;
+
+}
+
+.historyItem {
+    display: flex;
+    margin: 7px 0;
+    font-size: 12px;
+}
+
+/* TODO: selected history item color change and add hover state and curser pointer*/
+
+.itemHeader {
+    flex: 1;
+    text-align: left;
+    color: var(--lightPrimary5);
+    margin:0;
+}
+
+.itemDescription {
+    flex: 2.5;
+    text-align: left;
+    color: var(--offwhite);
+    margin:0;
+}
+
+.historyListContainer {
+    height: calc(100vh - 96px - 60px);
+    overflow-y: scroll;
+    margin:0 10px 0 0;
+}
+
+.historyListContainer::-webkit-scrollbar {
+    width: 8px;
+    margin-right: 5px;
+}
+
+.historyListContainer::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: var(--lightPrimary1);
+}
+
+.historyListContainer::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: black;
+}
