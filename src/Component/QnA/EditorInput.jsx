@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from "react";
 import Editor from "@monaco-editor/react";
 import Dropdown from "../Dropdown";
 import "./EditorInput.css";
-import useLocalStorage from "../useLocalStorage";
 
 function EditorInput({ code, setCode, language, setLanguage }) {
   const ref = useRef(null);

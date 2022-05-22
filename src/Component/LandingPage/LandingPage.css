@@ -1,0 +1,38 @@
+.landingPageContainer {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--primary);
+}
+
+.landingPageHeader {
+    color: var(--offwhite);
+    font-size: 64px;
+    margin-top:25vh;
+    margin-bottom: 0;
+}
+
+.landingPageSubheader {
+    color: var(--lightPrimary5);
+    margin-top: 4px;
+    margin-bottom: 6vh;
+    font-size: 14px;
+}
+
+.getStartedButton {
+    font-size: 14px;
+    padding: 15px 30px 15px 28px;
+    border-radius: 10px;
+    background-color: var(--secondary);
+    border: none;
+    width: 200px;
+}
+
+.getStartedButton:hover {
+    background-color: var(--secondaryHover);
+    cursor: pointer;
+}
+
+.getStartedButtonText {
+    margin-left: 10px;
+    display: inline;
+}
