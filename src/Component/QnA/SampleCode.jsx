@@ -27,36 +27,37 @@ function SampleCode({ setIsOpen, selectedCode, setSelectedCode }) {
     <div className="sampleCodeContainer">
       <div className="sampleCodes">
         {sampleCode.map((sample) => (
-          <div className="sampleCodeItemContainer">
+          <div
+            className={classNames("sampleCodeItemContainer", {
+              selectedSample: selectedCode?.code === sample.code,
+            })}
+            onClick={() => setSelectedCode(sample)}
+          >
             <div
-              className={classNames("selectMask", {
-                selectedMask: selectedCode?.code === sample.code,
-              })}
-              onClick={() => {
-                console.log(sample);
-                setSelectedCode(sample);
-              }}
-            />
-            <Editor
-              className="sampleCodeItem"
-              height="185px"
-              width="400px"
-              value={sample.code}
-              onMount={(editor, monaco) => {
-                monaco.editor.defineTheme("customTheme", {
-                  base: "vs-dark",
-                  inherit: true,
-                  rules: [],
-                  colors: {
-                    "editor.background": "#27245C",
-                  },
-                });
-                monaco.editor.setTheme("customTheme");
-              }}
-              language={sample.language}
-              fontSize="10px"
-              options={{ readOnly: true }}
-            />
+              onClick={() => console.log("Hello")}
+              className="noPointerEvent"
+            >
+              <Editor
+                className="sampleCodeItem"
+                height="185px"
+                width="100%"
+                value={sample.code}
+                onMount={(editor, monaco) => {
+                  monaco.editor.defineTheme("customTheme", {
+                    base: "vs-dark",
+                    inherit: true,
+                    rules: [],
+                    colors: {
+                      "editor.background": "#27245C",
+                    },
+                  });
+                  monaco.editor.setTheme("customTheme");
+                }}
+                language={sample.language}
+                fontSize="10px"
+                options={{ readOnly: true }}
+              />
+            </div>
           </div>
         ))}
       </div>
