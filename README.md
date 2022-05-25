@@ -1,5 +1,5 @@
 # Understand code faster and easier
-### Open AI Code Interpreter -- cheatcode
+### Introducing: cheatcode - an Open AI Code Interpreter
 
 CLICK [HERE](http://ai.sallylim.ca/) TO BECOME A MASTER CODER
 
